@@ -28,7 +28,8 @@ export default class Signin extends Component {
             style={styles.stretch}
           />
 
-          <Title style={styles.stretch}>Hello</Title>
+          <Title style={styles.hi}>Hello !</Title>
+          <Text>Welcome! Smile, and the day will smile with you.”</Text>
         </Content>
         <Footer>
           <FooterTab>
@@ -49,7 +50,7 @@ const styles = StyleSheet.create({
 
     position: "relative",
     top: 40,
-    left: 30
+    left: 32
   },
   btn: {
     marginStart: 90,
@@ -57,5 +58,13 @@ const styles = StyleSheet.create({
   },
   txt: {
     color: "white"
+  },
+  hi: {
+    width: 300,
+    height: 300,
+
+    position: "relative",
+    top: 55,
+    left: 30
   }
 });
