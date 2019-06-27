@@ -10,8 +10,19 @@ import {
   Title
 } from "native-base";
 import { Text, Image, StyleSheet, View } from "react-native";
+import Form from "./Form";
+import { Navigation } from "react-native-navigation";
 
 export default class Signin extends Component {
+  formHandle() {
+    Navigation.setRoot({
+      root: {
+        component: {
+          name: "Form"
+        }
+      }
+    });
+  }
   render() {
     console.log(this.props);
     return (
@@ -33,7 +44,13 @@ export default class Signin extends Component {
         </Content>
         <Footer>
           <FooterTab>
-            <Button success rounded block style={styles.btn}>
+            <Button
+              success
+              rounded
+              block
+              style={styles.btn}
+              onPress={() => this.formHandle()}
+            >
               <Text style={styles.txt}>SIGN IN</Text>
             </Button>
           </FooterTab>
